@@ -37,6 +37,9 @@ body {
     padding: 16px;
     border-radius: 5px;
   }
+  & .avatar {
+    max-width: 50px;
+  }
 }
 
 .modal-content {
@@ -58,9 +61,3 @@ body {
 .hidden {
   display: none;
 }
-
-// =====
-.avatar {
-  border-radius: 50%;
-}
-// =====
