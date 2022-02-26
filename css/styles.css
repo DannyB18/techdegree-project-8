@@ -337,15 +337,96 @@ template {
   display: none;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.1;
+  font-family: "Open Sans", sans-serif;
+}
+
+h2 {
+  margin: 12px 0;
+}
+
+p {
+  margin: 12px 0;
+  color: grey;
+}
+
+hr {
+  margin: 24px;
+  color: grey;
+}
+
+body {
+  margin: 0 40px;
+}
+
 body {
   position: relative;
 }
 
 .overlay {
+  background-color: grey;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
+  bottom: 0;
+  background: rgba(100, 100, 100, 0.4);
+}
+
+.modal {
+  width: 375px;
+  margin: 15% auto auto;
+  text-align: center;
+  position: relative;
+}
+.modal::before {
+  content: "<";
+  font-size: 1.5rem;
+  position: absolute;
+  left: -64px;
+  top: calc(50% - 16px);
+  background-color: white;
+  padding: 16px;
+  border-radius: 5px;
+}
+.modal::after {
+  content: ">";
+  font-size: 1.5rem;
+  position: absolute;
+  right: -64px;
+  top: calc(50% - 16px);
+  background-color: white;
+  padding: 16px;
+  border-radius: 5px;
+}
+
+.modal-content {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10%;
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.avatar {
+  border-radius: 50%;
 }
 
 /*# sourceMappingURL=styles.css.map */
