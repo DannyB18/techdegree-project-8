@@ -3,8 +3,11 @@ let employees = [];
 const employeesUrl = `https://randomuser.me/api/?results=12&inc=name,picture,email,location,phone,dob&nat=US&noinfo`
 const gridContainer = document.querySelector(".grid-container");
 const overlay = document.querySelector(".overlay");
+const modal = overlay.querySelector(".modal");
 const modalContainer = document.querySelector(".modal-content");
 const modalClose = document.querySelector(".modal-close");
+const searchbar = document.getElementById("searchbar");
+let modalIndex;
 
 fetch(employeesUrl)
     .then(res => res.json())
@@ -64,6 +67,7 @@ gridContainer.addEventListener('click', (e) => {
         const index = card.getAttribute('data-index');
 
         displayModal(index);
+        modalIndex = parseInt(index);
     }
 });
 
@@ -71,3 +75,47 @@ modalClose.addEventListener('click', () => {
     overlay.classList.add("hidden");
 });
 
+
+// =================================
+// Employee Filter
+// =================================
+
+searchbar.addEventListener('keyup', () => {
+    const input = searchbar.value.toLowerCase();
+    const employeeCards = document.querySelectorAll(".card");
+    employeeCards.forEach(card => {
+        const name = card.querySelector("h2").textContent.toLowerCase();
+        if (name.includes(input) == false) {
+            card.style.display = "none";
+        } else {
+            card.style.display = '';
+        }
+    })
+});
+
+
+// =================================
+// Next/Previous Modal
+// =================================
+
+modal.addEventListener('click', (e) => {
+    const button = e.target;
+    if (button.tagName === "BUTTON") {
+        if (button.textContent === "<") {
+            if (modalIndex === 0) {
+                modalIndex = (employees.length - 1);
+            } else {
+                modalIndex -= 1;
+            }
+            displayModal(modalIndex.toString(10));
+        } else if (button.textContent === ">") {
+            if (modalIndex === (employees.length - 1)) {
+                modalIndex = 0;
+            } else {
+                modalIndex += 1;
+            }
+            displayModal(modalIndex.toString(10));
+        }
+        
+    }
+})

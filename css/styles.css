@@ -479,7 +479,7 @@ header {
   font-size: 1.5rem;
   background-color: ligthgrey;
   border-radius: 5px;
-  border: 1px solid grey;
+  border: 2px solid #ddd;
   width: 50%;
   height: 10%;
   top: 100%;
