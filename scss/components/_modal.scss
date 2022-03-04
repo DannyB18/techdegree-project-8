@@ -15,26 +15,26 @@
   margin: 15% auto auto;
   text-align: center;
   position: relative;
-  &::before {
-    content: "<";
-    font-size: 1.5rem;
-    position: absolute;
-    left: -64px;
-    top: calc(50% - 16px);
-    background-color: white;
-    padding: 16px;
-    border-radius: 5px;
-  }
-  &::after {
-    content: ">";
-    font-size: 1.5rem;
-    position: absolute;
-    right: -64px;
-    top: calc(50% - 16px);
-    background-color: white;
-    padding: 16px;
-    border-radius: 5px;
-  }
+  // &::before {
+  //   content: "<";
+  //   font-size: 1.5rem;
+  //   position: absolute;
+  //   left: -64px;
+  //   top: calc(50% - 16px);
+  //   background-color: white;
+  //   padding: 16px;
+  //   border-radius: 5px;
+  // }
+  // &::after {
+  //   content: ">";
+  //   font-size: 1.5rem;
+  //   position: absolute;
+  //   right: -64px;
+  //   top: calc(50% - 16px);
+  //   background-color: white;
+  //   padding: 16px;
+  //   border-radius: 5px;
+  // }
   & .avatar {
     max-width: 150px;
   }

@@ -1,0 +1,12 @@
+@mixin mq($break) {
+  $value: map-get($breakpoints, $break);
+
+  @media (min-width: $value) {
+    @content;
+  }
+}
+
+@mixin max-size($length) {
+  max-width: $length;
+  max-height: $length;
+}

@@ -342,9 +342,14 @@ template {
 }
 
 html {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   line-height: 1.1;
   font-family: "Open Sans", sans-serif;
+}
+@media (min-width: 990px) {
+  html {
+    font-size: 0.9rem;
+  }
 }
 
 h1 {
@@ -369,9 +374,14 @@ hr {
 }
 
 body {
-  padding: 0 40px;
+  padding: 0 10px;
   background-color: #fcfcfc;
   position: relative;
+}
+@media (min-width: 780px) {
+  body {
+    padding: 0 20px;
+  }
 }
 
 header {
@@ -380,8 +390,7 @@ header {
 
 .avatar {
   border-radius: 50%;
-  max-width: 150px;
-  max-height: 150px;
+  max-width: 30%;
 }
 
 .grid-container {
@@ -391,9 +400,15 @@ header {
   grid-auto-flow: row;
   grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
-  column-gap: 40px;
-  row-gap: 35px;
+  column-gap: 30px;
+  row-gap: 20px;
   align-items: center;
+}
+@media (min-width: 780px) {
+  .grid-container {
+    column-gap: 40px;
+    row-gap: 35px;
+  }
 }
 
 .overlay {
@@ -413,26 +428,6 @@ header {
   margin: 15% auto auto;
   text-align: center;
   position: relative;
-}
-.modal::before {
-  content: "<";
-  font-size: 1.5rem;
-  position: absolute;
-  left: -64px;
-  top: calc(50% - 16px);
-  background-color: white;
-  padding: 16px;
-  border-radius: 5px;
-}
-.modal::after {
-  content: ">";
-  font-size: 1.5rem;
-  position: absolute;
-  right: -64px;
-  top: calc(50% - 16px);
-  background-color: white;
-  padding: 16px;
-  border-radius: 5px;
 }
 .modal .avatar {
   max-width: 150px;

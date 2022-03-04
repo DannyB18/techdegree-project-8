@@ -3,9 +3,12 @@
 }
 
 html {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   line-height: 1.1;
   font-family: "Open Sans", sans-serif;
+  @include mq("lg") {
+    font-size: 0.9rem;
+  }
 }
 
 h1 {
