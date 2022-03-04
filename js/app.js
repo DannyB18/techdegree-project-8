@@ -1,6 +1,6 @@
 
 let employees = [];
-const employeesUrl = `https://randomuser.me/api/?results=12&inc=name, picture, email, location, phone, dob &noinfo *nat=US`
+const employeesUrl = `https://randomuser.me/api/?results=12&inc=name,picture,email,location,phone,dob&nat=US&noinfo`
 const gridContainer = document.querySelector(".grid-container");
 const overlay = document.querySelector(".overlay");
 const modalContainer = document.querySelector(".modal-content");
