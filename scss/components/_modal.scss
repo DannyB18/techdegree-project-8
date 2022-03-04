@@ -1,7 +1,3 @@
-body {
-  position: relative;
-}
-
 .overlay {
   width: 100vw;
   min-height: 100vh;
@@ -49,7 +45,7 @@ body {
 
 .modal-content {
   background-color: white;
-  border: 1px solid #ddd;
+  border: 2px solid #ddd;
   border-radius: 5px;
   padding: 10% 0;
 }

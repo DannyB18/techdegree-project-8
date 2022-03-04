@@ -13,6 +13,8 @@
 <body>
     <header>
         <h1>Awesome Startup Employee Directory</h1>
+        <label for="employee-search"></label>
+        <input id="searchbar" type="search" name="employee-search">
     </header>
     <main class="grid-container">
         <!--
@@ -38,9 +40,9 @@
                     <p class="address">${city}</p>
                     <hr/>
                     <p class="phone">${phone}</p>
-                    <p class="address">${street}, ${state} ${postcode}</p>
+                    <p class="address">${street.number} ${street.name}, ${state} ${postcode}</p>
                     <p class="birthday">Birthday: ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
-                </div> 
+                </div>
                 -->
             </div>
         </div>
