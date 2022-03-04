@@ -13,8 +13,10 @@
 <body>
     <header>
         <h1>Awesome Startup Employee Directory</h1>
-        <label for="employee-search">Search Employee: </label>
-        <input id="searchbar" type="search" name="employee-search">
+        <div class="search-container">
+            <label for="employee-search">Search Employee: </label>
+            <input id="searchbar" type="search" name="employee-search">
+        </div>
     </header>
     <main class="grid-container">
         <!--
@@ -31,6 +33,8 @@
     <div class="overlay hidden">
         <div class="modal">
             <button class="modal-close">x</button>
+            <button class="modalbtn modalbtn-prev"><</button>
+            <button class="modalbtn modalbtn-next">></button>
             <div class="modal-content">
                 <!-- 
                 <img class="avatar" src="${picture.large}">

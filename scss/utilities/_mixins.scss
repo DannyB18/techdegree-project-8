@@ -1,12 +1,25 @@
 @mixin mq($break) {
   $value: map-get($breakpoints, $break);
+  $sm: map-get($breakpoints, "sm");
 
-  @media (min-width: $value) {
-    @content;
+  @if $value == $sm {
+    @media (max-width: $value) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $value) {
+      @content;
+    }
   }
 }
 
 @mixin max-size($length) {
   max-width: $length;
   max-height: $length;
+}
+
+@mixin fixed-center($width) {
+  width: $width;
+  left: 50%;
+  margin-left: (-($width/2));
 }

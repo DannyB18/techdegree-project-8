@@ -2,6 +2,7 @@ body {
   padding: 0 10px;
   background-color: #fcfcfc;
   position: relative;
+  margin-bottom: 40px;
   @include mq("med") {
     padding: 0 20px;
   }
@@ -26,6 +27,9 @@ header {
   column-gap: 30px;
   row-gap: 20px;
   align-items: center;
+  @include mq("sm") {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
   @include mq("med") {
     column-gap: 40px;
     row-gap: 35px;

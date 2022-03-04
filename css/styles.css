@@ -346,6 +346,11 @@ html {
   line-height: 1.1;
   font-family: "Open Sans", sans-serif;
 }
+@media (max-width: 389px) {
+  html {
+    font-size: 0.7rem;
+  }
+}
 @media (min-width: 990px) {
   html {
     font-size: 0.9rem;
@@ -377,6 +382,7 @@ body {
   padding: 0 10px;
   background-color: #fcfcfc;
   position: relative;
+  margin-bottom: 40px;
 }
 @media (min-width: 780px) {
   body {
@@ -404,6 +410,11 @@ header {
   row-gap: 20px;
   align-items: center;
 }
+@media (max-width: 389px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
 @media (min-width: 780px) {
   .grid-container {
     column-gap: 40px;
@@ -424,16 +435,25 @@ header {
 }
 
 .modal {
-  width: 325px;
-  margin: 15% auto auto;
+  position: fixed;
+  width: 326px;
+  left: 50%;
+  margin-left: -163px;
+  margin-top: 15%;
   text-align: center;
-  position: relative;
 }
 .modal .avatar {
   max-width: 150px;
 }
 .modal .text-container {
   margin-left: 0;
+}
+@media (max-width: 389px) {
+  .modal {
+    width: 300px;
+    left: 50%;
+    margin-left: -150px;
+  }
 }
 
 .modal-content {
@@ -447,9 +467,42 @@ header {
   position: absolute;
   top: 15px;
   right: 15px;
-  background-color: inherit;
-  border: none;
+  background-color: lightgrey;
+  padding: 6px 10px;
+  border: 1px solid grey;
+  border-radius: 3px;
   cursor: pointer;
+}
+
+.modalbtn {
+  position: absolute;
+  font-size: 1.5rem;
+  background-color: ligthgrey;
+  border-radius: 5px;
+  border: 1px solid grey;
+  width: 50%;
+  height: 10%;
+  top: 100%;
+  cursor: pointer;
+}
+.modalbtn-prev {
+  left: 0;
+}
+.modalbtn-next {
+  right: 0;
+}
+@media (min-width: 780px) {
+  .modalbtn {
+    width: 20%;
+    height: 100%;
+    top: 0;
+  }
+  .modalbtn-prev {
+    left: -20%;
+  }
+  .modalbtn-next {
+    right: -20%;
+  }
 }
 
 .hidden {
@@ -471,8 +524,17 @@ header {
 }
 
 #searchbar {
-  width: 200px;
+  width: 300px;
   height: 30px;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
 }
 
 /*# sourceMappingURL=styles.css.map */
