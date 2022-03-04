@@ -15,117 +15,33 @@
         <h1>Awesome Startup Employee Directory</h1>
     </header>
     <main class="grid-container">
-        <div class="card">
-            <img class="avatar" src="images/member-2.jpg">
+        <!--
+        <div class="card" data-index="${index}">
+            <img class="avatar" src="${picture.large}" />
             <div class="text-container">
-                <h2 class="name">Dale Byrd</h2>
-                <p class="email">dale.byrd52@example.com</p>
-                <p class="address">Orlando</p>
+                <h2 class="name">${name.first} ${name.last}</h2>
+                <p class="email">${email}</p>
+                <p class="address">${city}</p>
             </div>
         </div>
-        <div class="card">
-            <img class="avatar" src="images/member-2.jpg">
-            <div class="text-container">
-                <h2 class="name">Dale Byrd</h2>
-                <p class="email">dale.byrd52@example.com</p>
-                <p class="address">Orlando</p>
-            </div>
-        </div>
-        <div class="card">
-            <img class="avatar" src="images/member-2.jpg">
-            <div class="text-container">
-                <h2 class="name">Dale Byrd</h2>
-                <p class="email">dale.byrd52@example.com</p>
-                <p class="address">Orlando</p>
-            </div>
-        </div>
-        <div class="card">
-            <img class="avatar" src="images/member-2.jpg">
-            <div class="text-container">
-                <h2 class="name">Dale Byrd</h2>
-                <p class="email">dale.byrd52@example.com</p>
-                <p class="address">Orlando</p>
-            </div>
-        </div>
-        <div class="card">
-            <img class="avatar" src="images/member-2.jpg">
-            <div class="text-container">
-                <h2 class="name">Dale Byrd</h2>
-                <p class="email">dale.byrd52@example.com</p>
-                <p class="address">Orlando</p>
-            </div>
-        </div>
-        <div class="card">
-            <img class="avatar" src="images/member-2.jpg">
-            <div class="text-container">
-                <h2 class="name">Dale Byrd</h2>
-                <p class="email">dale.byrd52@example.com</p>
-                <p class="address">Orlando</p>
-            </div>
-        </div>
-        <div class="card">
-            <img class="avatar" src="images/member-2.jpg">
-            <div class="text-container">
-                <h2 class="name">Dale Byrd</h2>
-                <p class="email">dale.byrd52@example.com</p>
-                <p class="address">Orlando</p>
-            </div>
-        </div>
-        <div class="card">
-            <img class="avatar" src="images/member-2.jpg">
-            <div class="text-container">
-                <h2 class="name">Dale Byrd</h2>
-                <p class="email">dale.byrd52@example.com</p>
-                <p class="address">Orlando</p>
-            </div>
-        </div>
-        <div class="card">
-            <img class="avatar" src="images/member-2.jpg">
-            <div class="text-container">
-                <h2 class="name">Dale Byrd</h2>
-                <p class="email">dale.byrd52@example.com</p>
-                <p class="address">Orlando</p>
-            </div>
-        </div>
-        <div class="card">
-            <img class="avatar" src="images/member-2.jpg">
-            <div class="text-container">
-                <h2 class="name">Dale Byrd</h2>
-                <p class="email">dale.byrd52@example.com</p>
-                <p class="address">Orlando</p>
-            </div>
-        </div>
-        <div class="card">
-            <img class="avatar" src="images/member-2.jpg">
-            <div class="text-container">
-                <h2 class="name">Dale Byrd</h2>
-                <p class="email">dale.byrd52@example.com</p>
-                <p class="address">Orlando</p>
-            </div>
-        </div>
-        <div class="card">
-            <img class="avatar" src="images/member-2.jpg">
-            <div class="text-container">
-                <h2 class="name">Dale Byrd</h2>
-                <p class="email">dale.byrd52@example.com</p>
-                <p class="address">Orlando</p>
-            </div>
-        </div>
+        -->
     </main>
     <div class="overlay hidden">
         <div class="modal">
             <button class="modal-close">x</button>
             <div class="modal-content">
-                <img class="avatar" src="images/member-2.jpg">
+                <!-- 
+                <img class="avatar" src="${picture.large}">
                 <div class="text-container">
-                    <h2 class="name">Dale Byrd</h2>
-                    <p class="email">dale.byrd52@example.com</p>
-                    <p class="address">Orlando</p>
+                    <h2 class="name">${name.first} ${name.last}</h2>
+                    <p class="email">${email}</p>
+                    <p class="address">${city}</p>
                     <hr/>
-                    <p class="phone">(123) 456-7890</p>
-                    <p class="address">123 Somewhere Street, FL 32708</p>
-                    <p class="birthday">Birthday: 01/23/94</p>
-                </div>
+                    <p class="phone">${phone}</p>
+                    <p class="address">${street}, ${state} ${postcode}</p>
+                    <p class="birthday">Birthday: ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
+                </div> 
+                -->
             </div>
         </div>
     </div>
